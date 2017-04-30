@@ -24,7 +24,9 @@ class UserController extends Controller
         ]);
         $user->save();
 
-        return redirect()->route('user.signup');
+        Auth::login($user);
+
+        return redirect()->route('user.profile');
     }
 
     public function getSignIn() {

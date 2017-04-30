@@ -11,10 +11,48 @@
 |
 */
 
+/*
+*--------------------------
+* General Navigation Routes
+*--------------------------
+*/
+
 Route::get('/', [
     'uses' => 'QuotesController@getIndex',
     'as' => 'quotes.index'
 ]);
+
+Route::get('/categories', [
+    'uses' => 'QuotesController@getCategories',
+    'as' => 'quotes.categories'
+]);
+
+Route::get('/custom_search', [
+    'uses' => 'QuotesController@getCustomSearch',
+    'as' => 'quotes.custom_search'
+]);
+
+Route::get('/submit_quote', [
+    'uses' => 'QuotesController@getSubmitQuote',
+    'as' => 'quotes.submit_quote'
+]);
+
+Route::get('/time_periods', [
+    'uses' => 'QuotesController@getTimePeriods',
+    'as' => 'quotes.time_periods'
+]);
+
+Route::get('/authors', [
+    'uses' => 'QuotesController@getAuthors',
+    'as' => 'quotes.authors'
+]);
+
+
+/*
+*---------------------------
+* User Management Routes
+*---------------------------
+*/
 
 Route::group(['prefix' => 'user'], function() {
     Route::group(['middleware' => 'guest'], function() {

@@ -26,3 +26,7 @@ h2, h4, h6, p {
     color: #eee;
     text-decoration: none;
 }
+
+ul {
+    list-style-type: none;
+}

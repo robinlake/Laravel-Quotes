@@ -22,7 +22,7 @@ Route::get('/', [
     'as' => 'quotes.index'
 ]);
 
-Route::get('/categories', [
+Route::get('/categories/{category}', [
     'uses' => 'QuotesController@getCategories',
     'as' => 'quotes.categories'
 ]);
@@ -37,13 +37,19 @@ Route::get('/submit_quote', [
     'as' => 'quotes.submit_quote'
 ]);
 
-Route::get('/time_periods', [
+Route::get('/time_periods/{period1}/{period2}', [
     'uses' => 'QuotesController@getTimePeriods',
     'as' => 'quotes.time_periods'
 ]);
 
-Route::get('/authors', [
-    'uses' => 'QuotesController@getAuthors',
+/*
+*---------------------------
+* Form Processing Routes
+*---------------------------
+*/
+
+Route::post('authorSearch', [
+    'uses' => 'QuotesController@postAuthors',
     'as' => 'quotes.authors'
 ]);
 

@@ -21,32 +21,33 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
           aria-haspopup="true" aria-expanded="false">Categories <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Motivational</a></li>
-            <li><a href="#">Scientific</a></li>
-            <li><a href="#">Literary</a></li>
+            <li><a href="{{ route('quotes.categories', ['category' => 'motivational']) }}">Motivational</a></li>
+            <li><a href="{{ route('quotes.categories', ['category' => 'scientific']) }}">Scientific</a></li>
+            <li><a href="{{ route('quotes.categories', ['category' => 'political']) }}">Political</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="{{ route('quotes.categories') }}">All Categories</a></li>
+            <li><a href="{{ route('quotes.categories', ['category' => 'all']) }}">All Categories</a></li>
           </ul>
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
           aria-haspopup="true" aria-expanded="false">Time Period <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Before 1000 AD</a></li>
-            <li><a href="#">Middle Ages</a></li>
-            <li><a href="#">Classical Period</a></li>
+            <li><a href="{{ route('quotes.time_periods', ['period1' => '-5000', 'period2' => '1000']) }}">Before 1000 AD</a></li>
+            <li><a href="{{ route('quotes.time_periods', ['period1' => '1000', 'period2' => '1500']) }}">Middle Ages</a></li>
+            <li><a href="{{ route('quotes.time_periods', ['period1' => '1500', 'period2' => '1800']) }}">Classical Period</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Modern Era</a></li>
+            <li><a href="{{ route('quotes.time_periods', ['period1' => '1800', 'period2' => '2100']) }}">Modern Era</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="{{ route('quotes.time_periods') }}">All Time Periods</a></li>
+            <li><a href="{{ route('quotes.time_periods', ['period1' => '-5000', 'period2' => '2100']) }}">All Time Periods</a></li>
           </ul>
         </li>
       </ul>
-      <form class="navbar-form navbar-left">
+      <form class="navbar-form navbar-left" method="post" action="authorSearch">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search By Author">
+          <input type="text" class="form-control" placeholder="Search By Author" name="author">
         </div>
         <button type="submit" class="btn btn-default">Search</button>
+        {{ csrf_field()}}
       </form>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="{{ route('quotes.custom_search') }}">Custom Search</a></li>

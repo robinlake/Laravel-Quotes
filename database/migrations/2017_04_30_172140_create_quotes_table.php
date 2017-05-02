@@ -17,8 +17,11 @@ class CreateQuotesTable extends Migration
         Schema::create('quotes', function (Blueprint $table){
             $table->increments('id');
             $table->timestamps();
-            $table->string('email')->unique();
-            $table->string('password');
+            $table->integer('date');
+            $table->string('bc');
+            $table->string('author');
+            $table->string('text');
+            $table->string('submitted_by');
             $table->rememberToken();
         });
     }

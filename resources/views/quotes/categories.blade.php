@@ -7,5 +7,7 @@
     <h2>Find quotes by category</h2>
 @endsection
 @section('content')
-
+@foreach($quotes as $quote)
+<li><b>{{ $quote->author}}</b> - {{ $quote->date }}<br> {{ $quote->text }}</li>
+@endforeach
 @endsection

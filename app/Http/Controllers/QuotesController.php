@@ -42,7 +42,12 @@ class QuotesController extends Controller
     * Post Functions
     */
     public function postAuthors(){
-        var_dump($_POST);
-    return view('quotes.authors');
-}
+        $author = $_POST['author'];
+        $quotes = DB::table('quotes')->where('author', 'LIKE', '%'.$author.'%')->get();
+    return view('quotes.authors', ['quotes' => $quotes]);
+    }
+
+    public function postCustomSearch(){
+        
+    }
 }

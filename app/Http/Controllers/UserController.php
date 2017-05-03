@@ -42,8 +42,9 @@ class UserController extends Controller
         if (Auth::attempt(['email' => $request->input('email'),
             'password' => $request->input('password')])){
                 return redirect()->route('user.profile');
+            }else{
+                 return redirect()->back();
             }
-            return redirect()->back();
     }
 
     public function getProfile() {

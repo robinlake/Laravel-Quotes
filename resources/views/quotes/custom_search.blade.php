@@ -10,32 +10,32 @@
 
 <h3>Select one or more options from the choices below</h3>
 
-<form>
+<form  method="post" action="customSearchResults">
   <div class="form-group">
     <label for="author">Author Name</label>
-    <input type="text" class="form-control" id="authorInput"
+    <input type="text" name="author" class="form-control" id="authorInput"
      aria-describedby="emailHelp" placeholder="Enter author name">
     <small id="authorHelp" class="form-text text-muted">Partial names will be searched</small>
   </div>
   <div class="form-group">
     <label for="startTime">Earliest Date</label>
-    <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Quotes starting from">
+    <input type="number" name="dateLow" class="form-control" id="exampleInputPassword1" placeholder="Quotes starting from">
       <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+        <input type="radio" class="form-check-input" name="dateLowBC" id="optionsRadios1" value="option1" checked>
         BC
       </label>
     <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+        <input type="radio" class="form-check-input" name="dateLowAD" id="optionsRadios2" value="option2">
         AD
       </label><br>
     <label for="endTime">Latest Date</label>
-    <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Quotes going until">
+    <input type="number" class="form-control" name="dateHigh" id="exampleInputPassword1" placeholder="Quotes going until">
       <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+        <input type="radio" class="form-check-input" name="dateHighBC" id="optionsRadios1" value="option1" checked>
         BC
       </label>
     <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+        <input type="radio" class="form-check-input" name="dateHighAD" id="optionsRadios2" value="option2">
         AD
       </label> 
   </div>
@@ -55,6 +55,7 @@
     placeholder="search for quotes containing specific text"></textarea>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
+  {{ csrf_field()}}
 </form>
 
 @endsection

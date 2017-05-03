@@ -57,6 +57,7 @@
           aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i> User Account <span class="caret"></span></a>
           <ul class="dropdown-menu">
             @if(Auth::check())
+              <li><a href="{{ route('quotes.submit_quote') }}">Submit Quote</a></li>
               <li><a href="{{ route('user.profile') }}">My Profile</a></li>
               <li><a href="{{ route('user.logout') }}">Logout</a></li>
             @else

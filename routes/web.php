@@ -53,6 +53,11 @@ Route::post('authorSearch', [
     'as' => 'quotes.authors'
 ]);
 
+Route::post('customSearchResults', [
+    'uses' => 'QuotesController@postCustomSearchResults',
+    'as' => 'quotes.custom_search_results'
+]);
+
 
 /*
 *---------------------------

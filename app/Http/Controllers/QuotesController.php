@@ -47,7 +47,9 @@ class QuotesController extends Controller
     return view('quotes.authors', ['quotes' => $quotes]);
     }
 
-    public function postCustomSearch(){
-        
+    public function postCustomSearchResults(){
+        $answer = $_POST;
+        echo implode("", $answer);
+        return view('quotes.custom_search_results');
     }
 }

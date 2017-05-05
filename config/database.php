@@ -44,7 +44,7 @@ return [
             'driver' => 'mysql',
             'host' => env('DB_HOST', 'mcldisu5ppkm29wf.cbetxkdyhwsb.us-east-1.rds.amazonaws.com'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'laravel_quotes'),
+            'database' => env('DB_DATABASE', 's7qy799oxagp8srs'),
             'username' => env('DB_USERNAME', 'vghvlpl1retnpv8w'),
             'password' => env('DB_PASSWORD', 'd1fh69n7b2q2mbzh'),
             'unix_socket' => env('DB_SOCKET', ''),

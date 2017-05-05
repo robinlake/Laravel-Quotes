@@ -12,6 +12,17 @@
 */
 
 /*
+*----------------------------
+* Require Database Connection
+*----------------------------
+*/
+
+Route::get('/', function()
+{
+    return User::all();
+});
+
+/*
 *--------------------------
 * General Navigation Routes
 *--------------------------

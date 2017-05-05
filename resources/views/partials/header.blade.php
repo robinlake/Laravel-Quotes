@@ -51,13 +51,14 @@
       </form>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="{{ route('quotes.custom_search') }}">Custom Search</a></li>
-        <li><a href="#">API Keys</a></li>
+        <li><a href="{{ route('quotes.api_description') }}">API Keys</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
           aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i> User Account <span class="caret"></span></a>
           <ul class="dropdown-menu">
             @if(Auth::check())
               <li><a href="{{ route('quotes.submit_quote') }}">Submit Quote</a></li>
+              <li><a href="{{ route('user.api_key') }}">My API Keys</a></li>
               <li><a href="{{ route('user.profile') }}">My Profile</a></li>
               <li><a href="{{ route('user.logout') }}">Logout</a></li>
             @else

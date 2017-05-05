@@ -29,6 +29,9 @@ class QuotesController extends Controller
     public function getSubmitQuote(){
         return view('quotes.submit_quote');
     }
+    public function getApiDescription(){
+        return view('quotes.api_description');
+    }
     public function getTimePeriods($period1, $period2){
         $data['period1'] = $period1;
         $data['period2'] = $period2;

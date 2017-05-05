@@ -51,6 +51,10 @@ class UserController extends Controller
         return view('user.profile');
     }
 
+    public function getApiKey() {
+        return view('user.api_key');
+    }
+
     public function getLogout() {
         Auth::logout();
         return redirect()->back();

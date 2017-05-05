@@ -42,6 +42,11 @@ Route::get('/time_periods/{period1}/{period2}', [
     'as' => 'quotes.time_periods'
 ]);
 
+Route::get('/api_description', [
+    'uses' => 'QuotesController@getApiDescription',
+    'as' => 'quotes.api_description'
+]);
+
 /*
 *---------------------------
 * Form Processing Routes
@@ -92,6 +97,11 @@ Route::group(['prefix' => 'user'], function() {
         Route::get('/profile', [
             'uses' => 'UserController@getProfile',
             'as' => 'user.profile'
+        ]);
+
+        Route::get('/api_key', [
+            'uses' => 'UserController@getApiKey',
+            'as' => 'user.api_key'
         ]);
 
         Route::get('/logout', [

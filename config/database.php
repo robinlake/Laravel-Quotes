@@ -1,5 +1,8 @@
 <?php
 
+// adding JawsDB config
+//$dbUrl = parse_url(env("JAWSDB_MARIA_URL"));
+
 return [
 
     /*

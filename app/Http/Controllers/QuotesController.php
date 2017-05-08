@@ -64,7 +64,7 @@ class QuotesController extends Controller
          $quotes = DB::table('quotes')->where([
              ['author', 'LIKE', '%'.$author.'%'],
              ['date', '<', $dateHigh],
-             //['date', '>', $dateLow],
+             ['date', '>', $dateLow],
              //['text', 'LIKE', '%'.$textContaining.'%'],
          ])->get();
         echo $author.$dateLow.$dateHigh.$textContaining;

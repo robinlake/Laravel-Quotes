@@ -40,7 +40,7 @@
       </label> 
   </div>
   <div class="form-group">
-    <label for="exampleSelect2">Example multiple select</label>
+    <label for="exampleSelect2">Category</label>
     <select multiple class="form-control" id="exampleSelect2">
       <option>Science</option>
       <option>Inspirational</option>

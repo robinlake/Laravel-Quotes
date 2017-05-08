@@ -56,8 +56,8 @@ class QuotesController extends Controller
     }
 
     public function postCustomSearchResults(){
-        $answer = $_POST;
-        echo implode("", $answer);
+        $author = $_POST['author'];
+        echo $author;
         return view('quotes.custom_search_results');
     }
 }

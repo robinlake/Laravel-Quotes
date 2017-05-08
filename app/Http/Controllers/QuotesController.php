@@ -67,7 +67,7 @@ class QuotesController extends Controller
              ['date', '>', $dateLow],
              ['text', 'LIKE', '%'.$textContaining.'%'],
          ])->get();
-        echo $author.$dateLow.$dateHigh.$textContaining;
+        echo $author.$dateLow.$dateHigh.$textContaining.$category;
 
         return view('quotes.custom_search_results', ['quotes' => $quotes]);
     }

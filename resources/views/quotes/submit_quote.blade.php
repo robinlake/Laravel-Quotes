@@ -7,10 +7,6 @@
     <h2>Submit a custom quote</h2>
 @endsection
 @section('content')
-<!--if(isset($quote)){
-    <h2>Thank you for submitting your quote!</h2>
-     <li><b>{{ $quote->author }}</b> -{{ $quote->date }} {{ $quote->text }}</li>
-}-->
 
 <h3>Fill in your quote details below</h3>
 

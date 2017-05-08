@@ -7,8 +7,12 @@
     <h2>Submit a custom quote</h2>
 @endsection
 @section('content')
+if(isset($quote)){
+    <h2>Thank you for submitting your quote!</h2>
+     <li><b>{{ $quote->author }}</b> -{{ $quote->date }} {{ $quote->text }}</li>
+}
 
-<h3>Select one or more options from the choices below</h3>
+<h3>Fill in your quote details below</h3>
 
 <form  method="post" action="submitQuote">
   <div class="form-group">
@@ -18,7 +22,7 @@
   </div>
   <div class="form-group">
     <label for="endTime">Date</label>
-    <input type="number" class="form-control" name="dateHigh" id="exampleInputPassword1" placeholder="Quote date">
+    <input type="number" class="form-control" name="date" id="exampleInputPassword1" placeholder="Quote date">
       <label class="form-check-label">
         <input type="radio" class="form-check-input" name="dateHighBC" id="optionsRadios1" value="option1" checked>
         BC
@@ -33,9 +37,9 @@
     <select class="form-control" id="category" name="category">
       <option>Scientific</option>
       <option>Political</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
+      <option>Motivational</option>
+      <option>Religious</option>
+      <option>Humorous</option>
     </select>
   </div>
   <div class="form-group">

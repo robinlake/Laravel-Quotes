@@ -44,9 +44,9 @@
     <select class="form-control" id="category" name="category">
       <option>Political</option>
       <option>Scientific</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
+      <option>Motivational</option>
+      <option>Religious</option>
+      <option>Humorous</option>
     </select>
   </div>
   <div class="form-group">

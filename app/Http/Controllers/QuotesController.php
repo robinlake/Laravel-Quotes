@@ -62,7 +62,8 @@ class QuotesController extends Controller
         $category = $_POST['category'];
         $textContaining = $_POST['textContaining'];
         $quotes = DB::table('quotes')->where([
-            ['author', 'LIKE', '%'.$author.'%']
+            ['author', 'LIKE', '%'.$author.'%'],
+            
         ])->get();
         echo $author.$dateLow.$dateHigh.$category.$textContaining;
 

@@ -65,7 +65,7 @@ class QuotesController extends Controller
              ['author', 'LIKE', '%'.$author.'%'],
              ['date', '<', $dateHigh],
              ['date', '>', $dateLow],
-             //['text', 'LIKE', '%'.$textContaining.'%'],
+             ['text', 'LIKE', '%'.$textContaining.'%'],
          ])->get();
         echo $author.$dateLow.$dateHigh.$textContaining;
 

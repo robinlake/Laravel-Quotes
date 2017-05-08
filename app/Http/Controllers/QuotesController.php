@@ -57,16 +57,16 @@ class QuotesController extends Controller
 
     public function postCustomSearchResults(){
         $author = $_POST['author'];
-        $dateLow = $_POST['dateLow'];
-        $dateHigh = $_POST['dateHigh'];
-        $category = $_POST['category'];
-        $textContaining = $_POST['textContaining'];
+        // $dateLow = $_POST['dateLow'];
+        // $dateHigh = $_POST['dateHigh'];
+        // $category = $_POST['category'];
+        // $textContaining = $_POST['textContaining'];
         $quotes = DB::table('quotes')->where('author', 'LIKE', '%'.$author.'%')->get();
         // $quotes = DB::table('quotes')->where([
         //     ['author', 'LIKE', '%'.$author.'%'],
 
         // ])->get();
-        echo $author.$dateLow.$dateHigh.$category.$textContaining;
+        //echo $author.$dateLow.$dateHigh.$category.$textContaining;
 
         return view('quotes.custom_search_results', ['quotes' => $quotes]);
     }

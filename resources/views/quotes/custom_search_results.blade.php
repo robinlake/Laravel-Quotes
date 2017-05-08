@@ -8,5 +8,5 @@
 @endsection
 @section('content')
 <h1>Displaying Search Results</h1>
-<button class='btn btn-primary' >New Search</button>
+<a href="{{ route('quotes.custom_search_results') }}" class="button">New Search</a>
 @endsection

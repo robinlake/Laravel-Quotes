@@ -26,6 +26,11 @@ class QuotesController extends Controller
     public function getCustomSearch(){
         return view('quotes.custom_search');
     }
+
+    public function getCustomSearchResults(){
+        return view('quotes.custom_search_results');
+    }
+
     public function getSubmitQuote(){
         return view('quotes.submit_quote');
     }

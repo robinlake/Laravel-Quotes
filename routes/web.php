@@ -43,6 +43,11 @@ Route::get('/custom_search', [
     'as' => 'quotes.custom_search'
 ]);
 
+Route::get('customSearchResults', [
+    'uses' => 'QuotesController@getCustomSearchResults',
+    'as' => 'quotes.custom_search_results'
+]);
+
 Route::get('/submit_quote', [
     'uses' => 'QuotesController@getSubmitQuote',
     'as' => 'quotes.submit_quote'

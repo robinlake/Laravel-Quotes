@@ -10,7 +10,7 @@
 
 <h3>Select one or more options from the choices below</h3>
 
-<form  method="post" action="customSearchResults">
+<form  method="post" action="submitQuote">
   <div class="form-group">
     <label for="author">Author Name</label>
     <input type="text" name="author" class="form-control" id="authorInput"

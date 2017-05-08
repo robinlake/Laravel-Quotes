@@ -79,6 +79,11 @@ Route::post('customSearchResults', [
     'as' => 'quotes.custom_search_results'
 ]);
 
+Route::post('submitQuote', [
+    'uses' => 'QuotesController@postSubmitQuote',
+    'as' => 'quotes.submit_quote'
+]);
+
 
 /*
 *---------------------------

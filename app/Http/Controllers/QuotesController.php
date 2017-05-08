@@ -71,4 +71,10 @@ class QuotesController extends Controller
 
         return view('quotes.custom_search_results', ['quotes' => $quotes]);
     }
+
+    public function postSubmitQuote(){
+
+
+        return view('quotes.submit_quote');
+    }
 }

@@ -82,7 +82,7 @@ class QuotesController extends Controller
             'author' => $author,
             'date' => $date,
             'category' => $category,
-            'text' => $text
+            'text' => $text,
         ]);
         return view('quotes.submit_quote');
     }

@@ -59,7 +59,7 @@ class QuotesController extends Controller
         $author = $_POST['author'];
         $dateLow = $_POST['dateLow'];
         $dateHigh = $_POST['dateHigh'];
-        // $category = $_POST['category'];
+        $category = $_POST['category'];
         $textContaining = $_POST['textContaining'];
          $quotes = DB::table('quotes')->where([
              ['author', 'LIKE', '%'.$author.'%'],

@@ -72,18 +72,18 @@ class QuotesController extends Controller
         return view('quotes.custom_search_results', ['quotes' => $quotes]);
     }
 
-    public function postSubmitQuote(){
-        $author = $_POST['author'];
-        $date = $_POST['date'];
-        $category = $_POST['category'];
-        $text = $_POST['text'];
+    // public function postSubmitQuote(){
+    //     $author = $_POST['author'];
+    //     $date = $_POST['date'];
+    //     $category = $_POST['category'];
+    //     $text = $_POST['text'];
 
-        $quote = DB::table('quotes')->insert([
-            'author' => $author,
-            'date' => $date,
-            'category' => $category,
-            'text' => $text,
-        ]);
-        return view('quotes.submit_quote');
-    }
+    //     $quote = DB::table('quotes')->insert([
+    //         'author' => $author,
+    //         'date' => $date,
+    //         'category' => $category,
+    //         'text' => $text,
+    //     ]);
+    //     return view('quotes.submit_quote');
+    // }
 }

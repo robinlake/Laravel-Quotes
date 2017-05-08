@@ -41,7 +41,7 @@
   </div>
   <div class="form-group">
     <label for="exampleSelect2">Category</label>
-    <select multiple class="form-control" id="exampleSelect2">
+    <select multiple class="form-control" id="category" name="category">
       <option>Science</option>
       <option>Inspirational</option>
       <option>Religious</option>
@@ -51,7 +51,7 @@
   </div>
   <div class="form-group">
     <label for="exampleTextarea">Text Containing</label>
-    <textarea class="form-control" id="exampleTextarea" rows="3" 
+    <textarea class="form-control" id="textContaining" name="textContaining" rows="3" 
     placeholder="search for quotes containing specific text"></textarea>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>

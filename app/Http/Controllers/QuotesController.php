@@ -61,10 +61,11 @@ class QuotesController extends Controller
         $dateHigh = $_POST['dateHigh'];
         $category = $_POST['category'];
         $textContaining = $_POST['textContaining'];
-        $quotes = DB::table('quotes')->where([
-            ['author', 'LIKE', '%'.$author.'%'],
+        $quotes = DB::table('quotes')->where('author', 'LIKE', '%'.$author.'%')->get();
+        // $quotes = DB::table('quotes')->where([
+        //     ['author', 'LIKE', '%'.$author.'%'],
 
-        ])->get();
+        // ])->get();
         echo $author.$dateLow.$dateHigh.$category.$textContaining;
 
         return view('quotes.custom_search_results', ['quotes' => $quotes]);
